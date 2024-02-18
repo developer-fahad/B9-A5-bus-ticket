@@ -137,7 +137,7 @@
             
             <div class=" text-center lg:flex justify-center lg:flex-col items-center lg:w-4/12 border-t-2 border-dashed border-white lg:border-0 pt-6 m-4">
               <img src="images/fare.png" alt="">
-              <h2 class="lg:text-3xl font-bold py-2"><span id="seat-price">500</span> Taka</h2>
+              <h2 class="lg:text-3xl font-bold py-2"><span id="seat-price">550</span> Taka</h2>
               <p class="lg:text-lg">Per Seat</p>
           </div>
         </div>
@@ -212,10 +212,14 @@
                 <p class="py-2">Total Price</p>
                 <p><span id="total-price">0</span> Taka</p>
               </div>
+              <div id="discount" class="flex justify-between">
+                <!-- <p class="py-2">Total Price</p>
+                <p><span id="total-price">0</span> Taka</p> -->
+              </div>
               <div>
                 <label class="input input-bordered flex items-center gap-2">
                 <input id="coupon" type="text" class="grow " placeholder="Have any coupon?" />
-                <span><button class="bg-green-500 px-3 font-bold py-2 rounded-lg">Apply</button></span>
+                <span><button id="apply-btn" class="bg-green-500 px-3 font-bold py-2 rounded-lg">Apply</button></span>
               </label>
               <div class="flex justify-between py-3">
                 <h1>Grand Total</h1>
@@ -230,7 +234,7 @@
               </label>
               <h1 class="font-bold py-4">Phone Number*</h1>
               <label class="input input-bordered flex items-center gap-2">
-                <input type="tel" class="grow" placeholder="Phone number" />
+                <input id="phone" type="tel" class="grow" placeholder="Phone number" />
               </label>
               <h1 class="font-bold py-4">Email ID</h1>
               <label class="input input-bordered flex items-center gap-2">
@@ -238,7 +242,24 @@
               </label>
             </div>
             <div class="py-5">
-              <button class="w-full font-bold bg-green-500 text-black py-3 rounded-xl">Next</button>
+              <!-- <button class="w-full font-bold bg-green-500 text-black py-3 rounded-xl">Next</button> -->
+
+              <!-- Open the modal using ID.showModal() method -->
+              <button id="next-btn" class="w-full font-bold bg-green-500 text-black py-3 rounded-xl">Next</button>
+              <dialog id="my_modal_1" class="modal">
+                <div class="modal-box">
+                  <h3 class="font-bold text-lg">Hello!</h3>
+                  <p class="py-4">Press ESC key or click the button below to close</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+
+
             </div>
             <div class="flex justify-around">
               <a class="underline" href="">Terms & Conditions</a>
