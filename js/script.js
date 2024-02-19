@@ -5,7 +5,7 @@ function getSection(){
 
 const allbtn = document.getElementsByClassName('add-btn');
 let totalBooked = 0;
-let leftSeats = 40;
+let leftSeats = 16;
 let seatCount = 0;
 for(const btn of allbtn){
     btn.addEventListener('click', function(){
